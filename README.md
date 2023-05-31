@@ -47,6 +47,12 @@ cd remix-render-atl
 npm run setup
 ```
 
+> The setup script will seed the local database for each app in the workshop.
+> The authenticated user credentials for each app are:
+>
+> - **Email:** `hi@chance.dev`
+> - **Password:** `render`
+
 If you experience errors here, please open [an issue][issue] with as many
 details as you can offer.
 
