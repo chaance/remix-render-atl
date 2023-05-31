@@ -6,7 +6,7 @@ import { requireUser } from "~/session.server";
 import { getCustomerListItems } from "~/models/customer.server";
 
 export async function loader({ request }: LoaderArgs) {
-  await requireUser(request);
+  //   await requireUser(request);
   return json({
     customers: await getCustomerListItems(),
   });
@@ -21,7 +21,7 @@ export default function Customers() {
         <NavLink
           to="new"
           className={({ isActive }) =>
-            "block border-b-4 border-gray-100 py-3 px-4 hover:bg-gray-50" +
+            "block border-b-4 border-gray-100 px-4 py-3 hover:bg-gray-50" +
             " " +
             (isActive ? "bg-gray-50" : "")
           }
@@ -36,7 +36,7 @@ export default function Customers() {
               key={customer.id}
               to={customer.id}
               className={({ isActive }) =>
-                "block border-b border-gray-50 py-3 px-4 hover:bg-gray-50" +
+                "block border-b border-gray-50 px-4 py-3 hover:bg-gray-50" +
                 " " +
                 (isActive ? "bg-gray-50" : "")
               }

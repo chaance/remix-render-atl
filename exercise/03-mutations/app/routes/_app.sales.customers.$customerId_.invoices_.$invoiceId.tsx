@@ -12,7 +12,7 @@ import { requireUser } from "~/session.server";
 import { currencyFormatter } from "~/utils";
 
 export async function loader({ request, params }: LoaderArgs) {
-  await requireUser(request);
+  //   await requireUser(request);
   let invoiceId = params.invoiceId!;
   let invoiceDetails = await getInvoiceDetails(invoiceId);
   if (!invoiceDetails) {

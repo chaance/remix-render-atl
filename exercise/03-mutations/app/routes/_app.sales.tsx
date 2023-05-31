@@ -4,7 +4,7 @@ import { NavLink, Outlet, useLocation } from "@remix-run/react";
 import { requireUser } from "~/session.server";
 
 export async function loader({ request }: LoaderArgs) {
-  await requireUser(request);
+  //   await requireUser(request);
   return json(null);
 }
 
