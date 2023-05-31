@@ -80,7 +80,7 @@ function AppLayout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </div>
-      <div className="flex-1">{children}</div>
+      <div className="h-full flex-1">{children}</div>
     </div>
   );
 }
