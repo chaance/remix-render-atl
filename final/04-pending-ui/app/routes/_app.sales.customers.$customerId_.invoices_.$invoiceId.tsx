@@ -4,7 +4,6 @@ import {
   Link,
   isRouteErrorResponse,
   useLoaderData,
-  useMatches,
   useParams,
   useRouteError,
 } from "@remix-run/react";
@@ -25,8 +24,6 @@ export async function loader({ request, params }: LoaderArgs) {
 export default function InvoiceRoute() {
   let { invoiceDetails } = useLoaderData<typeof loader>();
   let { number: invoiceNumber, customer } = invoiceDetails.invoice;
-  let matches = useMatches();
-  console.log(matches);
   return (
     <div className="relative p-10">
       <div className="text-[length:14px] font-bold leading-6">
